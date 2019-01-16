@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learn Resource</title>
+</head>
+<body>
+<h2>Learn Resource</h2>
+
+<table width="100%" border="1" cellspacing="1" cellpadding="0" >
+    <tr>
+        <td>作者</td>
+        <td>教程名称</td>
+        <td>地址</td>
+    </tr>
+    <tr th:each="learn : ${learnList}">
+        <td th:text="${learn.author}"></td>
+        <td th:text="${learn.title}"></td>
+        <td><a th:href="${learn.url}">点我</a></td>
+    </tr>
+
+</table>
+
+</body>
+</html>
